@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>FuseNotes — Meeting Notes, Summarized</title>
+    <meta
+      name="description"
+      content="FuseNotes turns meeting notes into private summaries and action items so freelancers and small teams stay aligned, save hours, and protect client trust."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:title" content="FuseNotes — Meeting Notes, Summarized" />
+    <meta
+      property="og:description"
+      content="FuseNotes delivers privacy-first summaries and action items so your team ships faster without digging through raw notes."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://agentic-5595908b.vercel.app" />
+    <meta property="og:image" content="https://agentic-5595908b.vercel.app/og-image.png" />
+    <meta
+      property="og:image:alt"
+      content="FuseNotes dashboard showing a clean timeline of searchable meeting summaries and action items."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="FuseNotes — Meeting Notes, Summarized" />
+    <meta
+      name="twitter:description"
+      content="FuseNotes turns meeting notes into privacy-first, searchable summaries and action items built for freelancers and small teams."
+    />
+    <meta name="twitter:image" content="https://agentic-5595908b.vercel.app/og-image.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              midnight: "#0F172A",
+              foam: "#E0F2FE",
+              citron: "#FACC15",
+              charcoal: "#0B1220",
+            },
+            boxShadow: {
+              glow: "0 25px 65px rgba(15, 23, 42, 0.35)",
+            },
+            backgroundImage: {
+              "radial-fade":
+                "radial-gradient(circle at top left, rgba(14, 165, 233, 0.25), transparent 55%)",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: #020617;
+      }
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "FuseNotes",
+        "url": "https://agentic-5595908b.vercel.app",
+        "logo": "https://agentic-5595908b.vercel.app/logo.svg",
+        "description": "FuseNotes turns meeting notes into privacy-first, searchable summaries and action items for freelancers and small teams.",
+        "sameAs": ["https://www.linkedin.com/company/fusenotes"],
+        "foundingDate": "2024",
+        "founders": [
+          {
+            "@type": "Person",
+            "name": "FuseNotes Team"
+          }
+        ],
+        "productSupported": {
+          "@type": "Product",
+          "name": "FuseNotes",
+          "description": "Lightweight, privacy-first tool that transforms meeting notes into searchable, shareable summaries and action items for freelancers and small teams.",
+          "image": "https://agentic-5595908b.vercel.app/og-image.png",
+          "brand": {
+            "@type": "Brand",
+            "name": "FuseNotes",
+            "logo": "https://agentic-5595908b.vercel.app/logo.svg"
+          },
+          "offers": {
+            "@type": "Offer",
+            "priceCurrency": "USD",
+            "price": "19",
+            "priceValidUntil": "2025-12-31",
+            "availability": "https://schema.org/InStock",
+            "url": "https://agentic-5595908b.vercel.app#pricing"
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="text-slate-100 antialiased bg-midnight">
+    <div class="relative overflow-hidden">
+      <div class="absolute inset-0 opacity-60 pointer-events-none bg-radial-fade"></div>
+      <a
+        href="#main"
+        class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 bg-cyan-500 text-slate-900 font-semibold px-4 py-2 rounded-md"
+        >Skip to content</a
+      >
+      <header class="relative z-10">
+        <nav
+          class="mx-auto flex max-w-6xl items-center justify-between px-6 py-6"
+          aria-label="Main navigation"
+        >
+          <div class="flex items-center gap-3">
+            <span class="inline-flex h-11 w-11 items-center justify-center rounded-full bg-cyan-400">
+              <span class="text-midnight text-xl font-bold" aria-hidden="true">F</span>
+            </span>
+            <span class="text-lg font-semibold tracking-tight">FuseNotes</span>
+          </div>
+          <div class="hidden items-center gap-8 text-sm font-medium text-slate-200 md:flex">
+            <a href="#features" class="transition hover:text-white">Features</a>
+            <a href="#workflow" class="transition hover:text-white">Workflow</a>
+            <a href="#pricing" class="transition hover:text-white">Pricing</a>
+            <a href="#faq" class="transition hover:text-white">FAQ</a>
+          </div>
+          <div class="hidden md:flex">
+            <a
+              href="#cta"
+              class="inline-flex items-center rounded-full border border-transparent bg-cyan-400 px-5 py-2.5 text-sm font-semibold text-midnight shadow-glow transition hover:bg-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-200"
+            >
+              Start 14-day trial
+            </a>
+          </div>
+          <button
+            type="button"
+            class="inline-flex items-center justify-center rounded-md border border-slate-700 bg-slate-900/40 p-2 text-slate-300 transition hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-200 md:hidden"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-label="Open navigation"
+            onclick="const menu = document.getElementById('mobile-menu'); const expanded = this.getAttribute('aria-expanded') === 'true'; this.setAttribute('aria-expanded', (!expanded).toString()); menu.classList.toggle('hidden');"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </nav>
+        <div id="mobile-menu" class="mx-6 hidden flex-col gap-4 rounded-2xl border border-slate-800 bg-slate-900/60 p-6 text-sm font-medium text-slate-200 md:hidden">
+          <a href="#features" class="transition hover:text-white">Features</a>
+          <a href="#workflow" class="transition hover:text-white">Workflow</a>
+          <a href="#pricing" class="transition hover:text-white">Pricing</a>
+          <a href="#faq" class="transition hover:text-white">FAQ</a>
+          <a
+            href="#cta"
+            class="mt-2 inline-flex items-center justify-center rounded-full bg-cyan-400 px-4 py-2 font-semibold text-midnight transition hover:bg-cyan-300"
+          >
+            Start 14-day trial
+          </a>
+        </div>
+      </header>
+
+      <main id="main" class="relative z-10">
+        <section class="mx-auto flex max-w-6xl flex-col gap-16 px-6 pb-24 pt-14 lg:flex-row lg:items-center">
+          <div class="max-w-2xl space-y-7">
+            <div class="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-900/50 px-4 py-1.5 text-xs font-medium uppercase tracking-wide text-cyan-200">
+              <span aria-hidden="true">●</span>
+              <span>Privacy-first meeting summaries</span>
+            </div>
+            <h1 class="text-4xl font-semibold tracking-tight text-slate-50 sm:text-5xl">
+              Meeting notes, distilled into clarity in under 60 seconds.
+            </h1>
+            <p class="text-lg text-slate-300">
+              FuseNotes transforms raw notes into searchable briefs, actionable follow-ups, and shareable updates. Built for lean teams who need signal, not busywork.
+            </p>
+            <div class="flex flex-col gap-4 sm:flex-row">
+              <a
+                href="#cta"
+                class="inline-flex items-center justify-center rounded-full bg-cyan-400 px-6 py-3 text-sm font-semibold text-midnight shadow-glow transition hover:bg-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-200"
+              >
+                Start 14-day trial
+              </a>
+              <a
+                href="#demo"
+                class="inline-flex items-center justify-center rounded-full border border-slate-700 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-slate-500 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-200"
+              >
+                Watch a 2-minute demo
+              </a>
+            </div>
+            <dl class="grid gap-6 text-sm text-slate-300 sm:grid-cols-3">
+              <div>
+                <dt class="font-semibold text-slate-100">99.8% uptime</dt>
+                <dd class="mt-1">Monitored and alert-backed infrastructure</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-slate-100">SOC2-ready</dt>
+                <dd class="mt-1">Encryption at rest and in transit by default</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-slate-100">Under 60s</dt>
+                <dd class="mt-1">From transcript to summary and task list</dd>
+              </div>
+            </dl>
+          </div>
+          <div
+            class="relative isolate mx-auto w-full max-w-xl overflow-hidden rounded-3xl border border-slate-800 bg-gradient-to-br from-slate-900/80 to-slate-900/40 p-8 shadow-glow"
+            role="img"
+            aria-label="FuseNotes interface showing a timeline of meetings, summaries, and action items."
+          >
+            <div class="absolute -top-32 -right-32 h-72 w-72 rounded-full bg-cyan-500/20 blur-3xl"></div>
+            <div class="space-y-6">
+              <div class="flex items-center justify-between rounded-2xl border border-slate-800 bg-slate-950/60 p-4">
+                <div>
+                  <p class="text-sm font-semibold text-white">Weekly Sync</p>
+                  <p class="text-xs text-slate-400">Recorded 2h ago · 23 highlights</p>
+                </div>
+                <span class="inline-flex items-center rounded-full bg-cyan-500/20 px-3 py-1 text-xs font-semibold text-cyan-200">
+                  Auto-summary
+                </span>
+              </div>
+              <div class="space-y-4 rounded-2xl border border-slate-800 bg-slate-950/60 p-5">
+                <h2 class="text-sm font-semibold uppercase tracking-wide text-slate-200">
+                  Summary Highlights
+                </h2>
+                <ul class="space-y-3 text-sm text-slate-300">
+                  <li class="flex gap-3">
+                    <span aria-hidden="true" class="mt-1 inline-flex h-2 w-2 rounded-full bg-cyan-300"></span>
+                    <span>Launch beta invitations to the first 40 design partners by Friday.</span>
+                  </li>
+                  <li class="flex gap-3">
+                    <span aria-hidden="true" class="mt-1 inline-flex h-2 w-2 rounded-full bg-citron"></span>
+                    <span>Consolidate onboarding flow feedback and ship UI tweaks in Sprint 18.</span>
+                  </li>
+                  <li class="flex gap-3">
+                    <span aria-hidden="true" class="mt-1 inline-flex h-2 w-2 rounded-full bg-cyan-300"></span>
+                    <span>Share privacy whitepaper with clients requesting compliance details.</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="rounded-2xl border border-slate-800 bg-slate-950/60 p-5">
+                <h2 class="text-sm font-semibold uppercase tracking-wide text-slate-200">Action Items</h2>
+                <ul class="mt-3 space-y-3 text-sm text-slate-300">
+                  <li class="flex items-center justify-between gap-3">
+                    <span>Publish follow-up recap to team channel</span>
+                    <span class="text-xs text-slate-400">Due tomorrow</span>
+                  </li>
+                  <li class="flex items-center justify-between gap-3">
+                    <span>Tag customer interviews with sentiment labels</span>
+                    <span class="text-xs text-slate-400">Assigned to Erin</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="features" class="border-t border-slate-800 bg-slate-950/30 py-20">
+          <div class="mx-auto max-w-6xl px-6">
+            <div class="max-w-3xl">
+              <h2 class="text-3xl font-semibold text-white sm:text-4xl">What teams love about FuseNotes</h2>
+              <p class="mt-4 text-lg text-slate-300">
+                A focused toolkit that saves time, keeps context tight, and respects your clients' privacy requirements from day one.
+              </p>
+            </div>
+            <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              <article class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
+                <h3 class="text-lg font-semibold text-white">Search that surfaces signal</h3>
+                <p class="mt-3 text-sm text-slate-300">
+                  Filter every summary, decision, and task instantly with semantic search that understands projects, people, and tags.
+                </p>
+              </article>
+              <article class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
+                <h3 class="text-lg font-semibold text-white">Private by design</h3>
+                <p class="mt-3 text-sm text-slate-300">
+                  Client notes stay siloed. Encryption at rest and in transit, granular workspace roles, and audit-ready logging built-in.
+                </p>
+              </article>
+              <article class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
+                <h3 class="text-lg font-semibold text-white">Action items that stick</h3>
+                <p class="mt-3 text-sm text-slate-300">
+                  Assign follow-ups, sync to Slack, Notion, or Asana, and keep everyone accountable with automatic reminders.
+                </p>
+              </article>
+              <article class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
+                <h3 class="text-lg font-semibold text-white">Structured exports</h3>
+                <p class="mt-3 text-sm text-slate-300">
+                  Export summaries, highlights, or transcripts in Markdown, PDF, or CSV for clients who expect professional documentation.
+                </p>
+              </article>
+              <article class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
+                <h3 class="text-lg font-semibold text-white">Flexible capture</h3>
+                <p class="mt-3 text-sm text-slate-300">
+                  Drop in Zoom recordings, live-type notes, or import docs. FuseNotes reorganizes everything into a streamlined briefing.
+                </p>
+              </article>
+              <article class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
+                <h3 class="text-lg font-semibold text-white">Admin controls that scale</h3>
+                <p class="mt-3 text-sm text-slate-300">
+                  Workspace insights, SSO, and retention policies make it simple to stay compliant as your roster grows.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="workflow" class="py-20">
+          <div class="mx-auto max-w-6xl px-6">
+            <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
+              <div class="space-y-6">
+                <h2 class="text-3xl font-semibold text-white sm:text-4xl">Stay in sync without chasing notes</h2>
+                <p class="text-lg text-slate-300">
+                  FuseNotes automates the tedious parts so your team can step straight into decisions and delivery.
+                </p>
+                <div class="space-y-5">
+                  <article class="flex gap-4">
+                    <span class="mt-1 inline-flex h-8 w-8 flex-none items-center justify-center rounded-full bg-cyan-500/20 text-sm font-semibold text-cyan-200">
+                      1
+                    </span>
+                    <div>
+                      <h3 class="text-base font-semibold text-white">Capture any meeting source</h3>
+                      <p class="mt-2 text-sm text-slate-300">
+                        Upload recordings or connect to your meeting tooling. FuseNotes ingests transcripts and highlights the moments that matter.
+                      </p>
+                    </div>
+                  </article>
+                  <article class="flex gap-4">
+                    <span class="mt-1 inline-flex h-8 w-8 flex-none items-center justify-center rounded-full bg-cyan-500/20 text-sm font-semibold text-cyan-200">
+                      2
+                    </span>
+                    <div>
+                      <h3 class="text-base font-semibold text-white">Summaries shaped to your teams</h3>
+                      <p class="mt-2 text-sm text-slate-300">
+                        Choose tone, include customer sentiment, or highlight blockers automatically. Everything stays readable on desktop or mobile.
+                      </p>
+                    </div>
+                  </article>
+                  <article class="flex gap-4">
+                    <span class="mt-1 inline-flex h-8 w-8 flex-none items-center justify-center rounded-full bg-cyan-500/20 text-sm font-semibold text-cyan-200">
+                      3
+                    </span>
+                    <div>
+                      <h3 class="text-base font-semibold text-white">Share updates instantly</h3>
+                      <p class="mt-2 text-sm text-slate-300">
+                        Send a recap link, export, or embed summaries anywhere. Every update stays searchable with granular permissions.
+                      </p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <div class="relative rounded-3xl border border-slate-800 bg-slate-900/50 p-8">
+                <div class="absolute -left-10 top-10 hidden h-20 w-20 rounded-full border border-cyan-500/40 lg:block"></div>
+                <figure class="space-y-6">
+                  <blockquote class="text-lg text-slate-200">
+                    “FuseNotes gives us the clarity of a full-time note taker without the overhead. Every summary is ready to share with clients in minutes, and we never worry about sensitive details leaking.”
+                  </blockquote>
+                  <figcaption class="flex items-center gap-4">
+                    <div class="h-12 w-12 rounded-full bg-gradient-to-br from-cyan-500/40 to-indigo-500/40"></div>
+                    <div>
+                      <p class="text-sm font-semibold text-white">Chase Nguyen</p>
+                      <p class="text-xs text-slate-400">Founder, Lumen Studio</p>
+                    </div>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="demo" class="border-t border-slate-800 bg-slate-950/40 py-20">
+          <div class="mx-auto max-w-6xl px-6">
+            <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+              <div>
+                <h2 class="text-3xl font-semibold text-white sm:text-4xl">Two-minute overview</h2>
+                <p class="mt-4 text-lg text-slate-300">
+                  See how FuseNotes clears inboxes, keeps projects on track, and gives freelancers confidence in every handoff.
+                </p>
+                <ul class="mt-6 space-y-3 text-sm text-slate-300">
+                  <li class="flex items-start gap-3">
+                    <span class="mt-1 inline-flex h-2 w-2 flex-none rounded-full bg-cyan-300"></span>
+                    <span>Walkthrough of the summary editor and privacy controls</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="mt-1 inline-flex h-2 w-2 flex-none rounded-full bg-citron"></span>
+                    <span>How to connect your meeting stack in under two minutes</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="mt-1 inline-flex h-2 w-2 flex-none rounded-full bg-cyan-300"></span>
+                    <span>See smart tagging and search in action across projects</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="relative aspect-video overflow-hidden rounded-3xl border border-slate-800 bg-slate-900/50 shadow-glow">
+                <iframe
+                  class="h-full w-full"
+                  src="https://www.youtube.com/embed/fn3KWM1kuAw"
+                  title="FuseNotes product demo"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="pricing" class="py-20">
+          <div class="mx-auto max-w-6xl px-6">
+            <div class="max-w-3xl space-y-4">
+              <h2 class="text-3xl font-semibold text-white sm:text-4xl">Pricing that respects your margins</h2>
+              <p class="text-lg text-slate-300">
+                Simple pricing with transparent limits. Every workspace includes secure storage, unlimited summaries, and export options.
+              </p>
+            </div>
+            <div class="mt-12 grid gap-6 lg:grid-cols-[1fr_auto]">
+              <article class="rounded-3xl border border-slate-800 bg-slate-900/60 p-8">
+                <div class="flex items-center justify-between gap-4">
+                  <h3 class="text-xl font-semibold text-white">Pro Workspace</h3>
+                  <span class="rounded-full bg-cyan-500/20 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-cyan-200">
+                    Most popular
+                  </span>
+                </div>
+                <p class="mt-3 text-sm text-slate-300">Perfect for freelancers and boutique agencies collaborating weekly.</p>
+                <div class="mt-8 flex items-baseline gap-2">
+                  <span class="text-4xl font-semibold text-white">$19</span>
+                  <span class="text-sm text-slate-400">per user / month</span>
+                </div>
+                <ul class="mt-6 space-y-3 text-sm text-slate-300">
+                  <li class="flex gap-3">
+                    <span aria-hidden="true" class="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-cyan-300"></span>
+                    <span>Unlimited summaries, highlights, and action items</span>
+                  </li>
+                  <li class="flex gap-3">
+                    <span aria-hidden="true" class="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-cyan-300"></span>
+                    <span>Client workspaces with granular access controls</span>
+                  </li>
+                  <li class="flex gap-3">
+                    <span aria-hidden="true" class="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-cyan-300"></span>
+                    <span>Integrations for Slack, Notion, Zapier, and calendar tools</span>
+                  </li>
+                  <li class="flex gap-3">
+                    <span aria-hidden="true" class="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-cyan-300"></span>
+                    <span>End-to-end encryption with audit-ready reporting</span>
+                  </li>
+                </ul>
+                <a
+                  href="#cta"
+                  class="mt-8 inline-flex w-full items-center justify-center rounded-full bg-cyan-400 px-6 py-3 text-sm font-semibold text-midnight shadow-glow transition hover:bg-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-200"
+                >
+                  Start 14-day trial
+                </a>
+              </article>
+              <aside class="rounded-3xl border border-slate-800 bg-slate-900/40 p-8 text-sm text-slate-300">
+                <h3 class="text-base font-semibold text-white">Need more seats?</h3>
+                <p class="mt-3">
+                  Growing faster than expected? Our team plan covers onboarding support, dedicated environments, and custom retention policies.
+                </p>
+                <a
+                  href="mailto:hello@fusenotes.com"
+                  class="mt-6 inline-flex items-center text-sm font-semibold text-cyan-200 hover:text-cyan-100"
+                >
+                  Talk to sales →
+                </a>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <section id="cta" class="border-t border-slate-800 bg-slate-950/50 py-20">
+          <div class="mx-auto max-w-4xl rounded-3xl border border-slate-800 bg-gradient-to-br from-slate-950/80 via-slate-900/70 to-slate-900/30 px-8 py-12 text-center shadow-glow">
+            <h2 class="text-3xl font-semibold text-white sm:text-4xl">Ready to never rewrite meeting notes again?</h2>
+            <p class="mt-4 text-lg text-slate-300">
+              Start your 14-day trial. No credit card required. Invite your clients or teammates when you are ready.
+            </p>
+            <form class="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center" aria-label="Start trial form">
+              <label for="email" class="sr-only">Work email</label>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                required
+                autocomplete="email"
+                placeholder="you@studio.co"
+                class="w-full rounded-full border border-slate-700 bg-slate-950/60 px-5 py-3 text-sm text-white placeholder:text-slate-500 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-200 sm:max-w-sm"
+              />
+              <button
+                type="submit"
+                class="inline-flex items-center justify-center rounded-full bg-cyan-400 px-6 py-3 text-sm font-semibold text-midnight transition hover:bg-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-200"
+              >
+                Get started
+              </button>
+            </form>
+            <p class="mt-4 text-xs text-slate-500">By submitting, you agree to our <a href="#" class="text-cyan-200 underline-offset-2 hover:underline">terms</a> and <a href="#" class="text-cyan-200 underline-offset-2 hover:underline">privacy policy</a>.</p>
+          </div>
+        </section>
+
+        <section id="faq" class="py-20">
+          <div class="mx-auto max-w-4xl px-6">
+            <h2 class="text-3xl font-semibold text-white sm:text-4xl">Questions, answered</h2>
+            <div class="mt-10 space-y-6">
+              <details class="rounded-2xl border border-slate-800 bg-slate-900/40 p-6">
+                <summary class="cursor-pointer text-base font-semibold text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-200">
+                  How does FuseNotes keep my client information private?
+                </summary>
+                <div class="mt-3 text-sm text-slate-300">
+                  All workspaces are isolated, with encryption at rest and in transit using TLS 1.3. Access controls let you invite collaborators with role-based permissions, and every export is logged for audit trails.
+                </div>
+              </details>
+              <details class="rounded-2xl border border-slate-800 bg-slate-900/40 p-6">
+                <summary class="cursor-pointer text-base font-semibold text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-200">
+                  Can I import past meeting notes or recordings?
+                </summary>
+                <div class="mt-3 text-sm text-slate-300">
+                  Yes. Batch upload docs, transcripts, or audio files and FuseNotes will generate summaries and action items retroactively so your knowledge base starts full from day one.
+                </div>
+              </details>
+              <details class="rounded-2xl border border-slate-800 bg-slate-900/40 p-6">
+                <summary class="cursor-pointer text-base font-semibold text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-200">
+                  Do you support compliance requirements?
+                </summary>
+                <div class="mt-3 text-sm text-slate-300">
+                  We provide data residency options, SOC2-ready policies, and can sign NDAs upon request. Enterprise security reviews are available with annual contracts.
+                </div>
+              </details>
+              <details class="rounded-2xl border border-slate-800 bg-slate-900/40 p-6">
+                <summary class="cursor-pointer text-base font-semibold text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-200">
+                  What integrations are available?
+                </summary>
+                <div class="mt-3 text-sm text-slate-300">
+                  FuseNotes connects with Zoom, Google Meet, Slack, Notion, Asana, and Zapier. More integrations are on the roadmap—reach out if you have a priority request.
+                </div>
+              </details>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="border-t border-slate-800 bg-slate-950/40">
+        <div class="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-12 text-sm text-slate-400 lg:flex-row lg:items-center lg:justify-between">
+          <div class="flex items-center gap-3">
+            <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-cyan-400">
+              <span class="text-midnight text-lg font-bold" aria-hidden="true">F</span>
+            </span>
+            <div>
+              <p class="text-base font-semibold text-white">FuseNotes</p>
+              <p class="text-xs text-slate-500">Meeting notes, summarized.</p>
+            </div>
+          </div>
+          <div class="flex flex-col gap-2 lg:flex-row lg:items-center lg:gap-6">
+            <a href="mailto:hello@fusenotes.com" class="hover:text-cyan-200">hello@fusenotes.com</a>
+            <a href="#" class="hover:text-cyan-200">Security</a>
+            <a href="#" class="hover:text-cyan-200">Privacy</a>
+            <a href="#" class="hover:text-cyan-200">Terms</a>
+          </div>
+          <p class="text-xs text-slate-500">© <span id="year"></span> FuseNotes. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
